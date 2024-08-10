@@ -1,0 +1,282 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constellation - Blog</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #0a192f;
+  --secondary-color: #f8f8f8;
+  --accent-color: #64ffda;
+  --text-color: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: var(--secondary-color);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(100, 255, 218, 0.7);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 100px 0;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.blog-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.blog-card .date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">CONSTELLATION</div>
+      <div class="nav-links">
+        <a href="/">Accueil</a>
+        <a href="/services">Services</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Notre Blog</h1>
+      </div>
+    </section>
+
+    <section class="blog-grid container">
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ordinateur portable sur un bureau avec du code à l'écran" width="300" height="200">
+        <div class="blog-content">
+          <p class="date">15 juin 2023</p>
+          <h2>Les Tendances en Développement Web pour 2023</h2>
+          <p>Découvrez les dernières tendances en matière de développement web qui façonnent l'industrie cette année.</p>
+          <a href="/blog/tendances-dev-web-2023" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1614624532983-4ce03382d63d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Peintre travaillant sur un mur" width="300" height="200">
+        <div class="blog-content">
+          <p class="date">2 juin 2023</p>
+          <h2>Comment Choisir la Bonne Peinture pour Votre Intérieur</h2>
+          <p>Guide complet pour sélectionner la peinture parfaite en fonction de votre espace et de vos besoins.</p>
+          <a href="/blog/choisir-peinture-interieur" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Électricien travaillant sur un tableau électrique" width="300" height="200">
+        <div class="blog-content">
+          <p class="date">20 mai 2023</p>
+          <h2>L'Importance de la Mise aux Normes Électriques</h2>
+          <p>Comprendre pourquoi la mise aux normes électriques est cruciale pour la sécurité de votre habitation.</p>
+          <a href="/blog/importance-normes-electriques" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ordinateur portable montrant des graphiques et des données" width="300" height="200">
+        <div class="blog-content">
+          <p class="date">8 mai 2023</p>
+          <h2>Les Outils Digitaux Indispensables pour les Entreprises</h2>
+          <p>Explorez les outils numériques qui peuvent révolutionner votre façon de travailler et booster votre productivité.</p>
+          <a href="/blog/outils-digitaux-indispensables" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Groupe de personnes travaillant ensemble sur un projet" width="300" height="200">
+        <div class="blog-content">
+          <p class="date">25 avril 2023</p>
+          <h2>L'Impact de Notre ONG sur la Communauté Locale</h2>
+          <p>Découvrez comment nos initiatives humanitaires transforment positivement la vie des gens dans notre région.</p>
+          <a href="/blog/impact-ong-communaute" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1603539947678-cd3954ed515d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Paysage urbain montrant différents types de bâtiments" width="300" height="200">
+        <div class="blog-content">
+          <p class="date">12 avril 2023</p>
+          <h2>Les Défis de la Construction Durable</h2>
+          <p>Analyse des enjeux et des solutions pour une construction plus respectueuse de l'environnement.</p>
+          <a href="/blog/defis-construction-durable" class="read-more">Lire la suite</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Constellation Services. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in animation for blog cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.blog-card').forEach((card, index) => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(50px)';
+      card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
