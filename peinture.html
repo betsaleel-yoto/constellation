@@ -236,6 +236,20 @@ footer {
 .services-dropdown:focus-within .services-dropdown-content {
   display: block;
 }
+#menu-toggle{
+    display: none;
+    cursor: pointer;
+  }
+
+  #menu-toggle.active{
+    color: var(--accent-color);
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 3rem;
@@ -251,6 +265,24 @@ footer {
 
   .service-grid {
     grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: var(--primary-color);
+      padding: 10px;
+      border-radius: 5px;
+  }
+  .nav-links.active {
+  display: flex; /* ou block, en fonction de la mise en page souhaitée */
+  margin-right: 5rem;
+}
+  #menu-toggle{
+    display: block;
   }
 }
 </style>
@@ -277,6 +309,24 @@ footer {
         </div>
         <a href="#contact">Contact</a>
       </div>
+      <button id="menu-toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-6 w-6"
+        >
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
     </nav>
   </header>
 
@@ -362,6 +412,13 @@ footer {
 
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('header');
+      const menuIcon = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -388,6 +445,7 @@ footer {
       card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
       observer.observe(card);
     });
+  });
   </script>
 </body>
 </html>
