@@ -254,6 +254,47 @@ footer {
 .services-dropdown:focus-within .services-dropdown-content {
   display: block;
 }
+.quick-links {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 50px 0;
+}
+
+.quick-links h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.quick-links-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.quick-links-column ul {
+  list-style-type: none;
+}
+
+.quick-links-column ul li {
+  margin-bottom: 10px;
+}
+
+.quick-links-column ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links-column ul li a:hover {
+  color: var(--accent-color);
+}
 #menu-toggle{
     display: none;
     cursor: pointer;
@@ -303,6 +344,9 @@ footer {
 }
   #menu-toggle{
     display: block;
+  }
+  .quick-links-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -440,11 +484,53 @@ footer {
     </section>
   </main>
 
-  <footer>
+  <section id="quick-links" class="quick-links">
     <div class="container">
-      <p>&copy; 2023 Constellation Services. Tous droits réservés.</p>
+      <h3>Liens Rapides</h3>
+      <div class="quick-links-grid">
+        <div class="quick-links-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#electricite">Électricité</a></li>
+            <li><a href="#peinture">Peinture</a></li>
+            <li><a href="#outils-digitaux">Outils Digitaux</a></li>
+            <li><a href="#ong">ONG</a></li>
+          </ul>
+        </div>
+        <div class="quick-links-column">
+          <h4>À Propos</h4>
+          <ul>
+            <li><a href="#">Notre Histoire</a></li>
+            <li><a href="#">Équipe</a></li>
+            <li><a href="#">Carrières</a></li>
+            <li><a href="#">Témoignages</a></li>
+          </ul>
+        </div>
+        <div class="quick-links-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Politique de Confidentialité</a></li>
+            <li><a href="#">Conditions d'Utilisation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://chat.whatsapp.com/constellation" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/constellationservices" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/constellation_services" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:contact@constellation-services.com"><i class="far fa-envelope"></i></a>
+      </div>
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2023 Constellation. Tous droits réservés. Brillons ensemble pour un avenir meilleur.</p>
+  </div>
+</footer>
 
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
   <script>
