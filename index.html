@@ -468,28 +468,17 @@ footer {
           <div class="quick-links-column">
             <h4>Services</h4>
             <ul>
-              <li><a href="#electricite">Électricité</a></li>
-              <li><a href="#peinture">Peinture</a></li>
-              <li><a href="#outils-digitaux">Outils Digitaux</a></li>
-              <li><a href="#ong">ONG</a></li>
-            </ul>
-          </div>
-          <div class="quick-links-column">
-            <h4>À Propos</h4>
-            <ul>
-              <li><a href="#">Notre Histoire</a></li>
-              <li><a href="#">Équipe</a></li>
-              <li><a href="#">Carrières</a></li>
-              <li><a href="#">Témoignages</a></li>
+              <li><a href="./electricite.html">Électricité</a></li>
+              <li><a href="./peinture.html">Peinture</a></li>
+              <li><a href="./digital.html">Outils Digitaux</a></li>
+              <li><a href="./ong.html">ONG</a></li>
             </ul>
           </div>
           <div class="quick-links-column">
             <h4>Support</h4>
             <ul>
               <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Politique de Confidentialité</a></li>
-              <li><a href="#">Conditions d'Utilisation</a></li>
+              <li><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -511,7 +500,6 @@ footer {
 
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
   <script>
-    // Smooth scrolling
     document.addEventListener('DOMContentLoaded', () => {
       const header = document.querySelector('header');
       const menuIcon = document.getElementById('menu-toggle');
@@ -519,7 +507,7 @@ footer {
     menuIcon.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
-
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -528,9 +516,8 @@ footer {
         });
       });
     });
-    
 
-    // Fade-in and slide-up animation for service cards
+    // Fade-in animation for service cards
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -546,23 +533,6 @@ footer {
       card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
       observer.observe(card);
     });
-
-    // Services dropdown
-    const servicesDropdown = document.querySelector('.services-dropdown');
-    const servicesDropdownContent = document.querySelector('.services-dropdown-content');
-
-    servicesDropdown.addEventListener('mouseover', () => {
-      servicesDropdownContent.style.display = 'block';
-    });
-
-    servicesDropdown.addEventListener('mouseout', () => {
-      servicesDropdownContent.style.display = 'none';
-    });
-
-    servicesDropdown.addEventListener('click', (e) => {
-      e.preventDefault();
-      servicesDropdownContent.style.display = servicesDropdownContent.style.display === 'block' ? 'none' : 'block';
-    })
   });
   </script>
 </body>
