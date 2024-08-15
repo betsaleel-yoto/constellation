@@ -71,6 +71,16 @@ nav {
   text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
 }
 
+.logo img{
+  width: 80px;
+  box-shadow:0 0 10px rgba(100, 255, 218, 0.5);
+  background-color: white;
+  height: 70px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 1px;
+}
+
 .nav-links {
   display: flex;
   gap: 30px;
@@ -344,13 +354,24 @@ footer {
   .quick-links-grid {
     grid-template-columns: 1fr;
   }
+
+  .logo img{
+  width: 60px;
+  box-shadow:0 0 10px rgba(100, 255, 218, 0.5);
+  background-color: white;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  top: 3px;
+}
+
 }
 </style>
 </head>
 <body>
   <header>
     <nav class="container">
-      <div class="logo">CONSTELLATION</div>
+      <div class="logo"><img src="./img/constellation.png" alt="logo constellation"></div>
       <div class="nav-links">
         <a href="./index.html">Accueil</a>
         <div class="services-dropdown">
